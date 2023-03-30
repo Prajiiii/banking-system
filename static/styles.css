@@ -1,0 +1,85 @@
+/* CSS code for banking website */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #912a2a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  header h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+
+  main h2 {
+    font-size: 40px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #912a2a;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  footer {
+    background-color: #912a2a;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  .quote-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #912a2a;
+    color: #FFFFFF;
+  }

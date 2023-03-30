@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<head>
+	<title>Check Balance Page</title>
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'transfer.css' %}">
+    <script>
+        function showPopup() {
+          const email = alert("Loan Application has been submitted. A confirmation email will be sent to the mentioned email ID.");
+        }
+      </script>
+</head>
+<body>
+  <header>
+     <h1>Microloans</h1>
+  </header>
+    <div class="user-input">
+        <label for="loanAmount">Enter loan amount:</label>
+        <input type="text" id="loanAmount" name="loanAmount"><br><br><br>
+        <label for="emailId">Enter email id:</label>
+        <input type="text" id="emailId" name="emailId"><br><br><br>
+        <label for="purpose">Enter purpose:</label>
+        <input type="text" id="purpose" name="purpose"><br><br><br>
+        <label for="loanYear">Years: </label>
+        <input type="text" id="loanYear" name="loanYear">
+        <label for="interestRate">Interest Rate:</label>
+        <input type="text" id="interestRate" name="interestRate" disabled>
+        <label for="loanRepayment">Total Repayment:</label>
+        <input type="text" id="loanRepayment" name="loanRepayment" disabled><br><br>
+        <button onclick="myFunction()" type="button" value="Proceed">Proceed</button><br><br>
+        <button type="button" value="Submit" onclick="showPopup()" hidden="hidden" id="sbt_btn">Submit</button>
+    </div>
+    <script>
+        function myFunction() {
+          Loan_Amount = document.getElementById("loanAmount").value;
+          Years = document.getElementById("loanYear").value;
+          if(Years == 2){
+            Interest_Rate = 1.5;
+          }
+          else if(Years == 5){
+            Interest_Rate = 1.0;
+          }
+          else if(Years == 5){
+            Interest_Rate = 1.0;
+          }
+          document.getElementById("interestRate").value = Interest_Rate;
+          document.getElementById("loanRepayment").value = Number(Loan_Amount) + Number((Loan_Amount*Interest_Rate*Years)/100);
+          document.getElementById("sbt_btn").hidden = false;
+        }
+        </script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'transfer.css' %}">
+    <script>
+        function showPopup() {
+          const email = alert("Successfully transferred !!!");
+        }
+      </script>
+	<title>Check Balance Page</title>
+</head>
+<body>
+  <header>
+    <h1>Transfer</h1>
+  </header>
+    <div class="user-input">
+        <label for="fromAccountNumber">Transfer from:</label>
+        <input type="text" id="fromAccountNumber" name="fromAccountNumber" placeholder="Enter sender account number"><br><br>
+        <label for="toAccountNumber">Transfer to:</label>
+        <input type="text" id="toAccountNumber" name="toAccountNumber" placeholder="Enter receiver account number"><br><br>
+        <label for="transferAmount">Amount:</label>
+        <input type="text" id="transferAmount" name="transferAmount" placeholder="Enter amount"><br><br>
+        <label for="transactionPassword">Password:</label>
+        <input type="text" id="transactionPassword" name="transactionPassword" placeholder="Enter Transaction Password"><br><br>
+        <button class="transfer-button" onclick="showPopup()">Transfer</button>
+    </div>
+</body>
+</html>
+{% endblock %}

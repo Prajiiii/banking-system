@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <head>
+    {% load static %}
+    <title>Insurance Policies</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script>
+        function showPopup() {
+          const email = prompt("Please enter your email address:");
+          if (email) {
+            const policyNumber = prompt("Please enter your policy number:");
+            alert(`Thank you! You will receive a quote shortly at ${email}.`);
+          }
+        }
+      </script>
+  </head>
+  <body>
+    <header>
+        <h1>Farmer's Insurance</h1>
+      </header>
+      <main>
+        <section>
+          <h2>Life Insurance</h2>
+          <p>Protect yourself and your families future. There are many different types of Life Insurance available. Contact your local branch or click 'Get a Quote' below to recieve further details from one of our representitives.  </p>
+          <button class="quote-button" onclick="showPopup()">Get a Quote</button>
+        </section>
+        <section>
+          <h2>Livestock Insurance</h2>
+          <p>Protect your livestock from unexpected events such as theft, disease outbreaks, and accidents. Contact your local branch or click 'Get a Quote' below to recieve further details from one of our representitives.</p>
+          <button class="quote-button" onclick="showPopup()">Get a Quote</button>
+        </section>
+        <section>
+          <h2>Machinery Insurance</h2>
+          <p>Protect your machinery from unexpected events such as theft, accidents, and breakdowns. Contact your local branch or click 'Get a Quote' below to recieve further details from one of our representitives.</p>
+          <button class="quote-button" onclick="showPopup()">Get a Quote</button>
+        </section>
+      </main>
+    </body>
+  </html>
+  {% endblock %}
+      

@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% block content %}
+  <head>
+    <title>Women Empowerment Scholorship</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'wom.css' %}">
+    <script>
+      function showPopup() {
+        const email = alert("Scholorship Application has been successfully submitted.");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Women Empowerment Scholorship</h1>
+    </header>
+    <main>
+        <h2>Women Empowerment Scholorship</h2>
+        <section>
+            <p>At Tribal Banking, we believe that empowering women is essential for creating a better future for all. That's why we're proud to offer our women empowerment scholarship program, designed to provide financial assistance and support to women pursuing higher education.</p>
+
+       <p>Our scholarship program is open to women of all ages and backgrounds who are enrolled in an accredited college or university. It is based on academic merit, financial need, and demonstrated commitment to empowering women and improving their communities.
+          Recipients of our women empowerment scholarships receive not only financial assistance, but also access to mentorship, networking opportunities, and other resources to support their educational and professional goals.</p>
+          
+        <p>If you're a woman pursuing higher education and share our commitment to empowering women, we encourage you to apply for our women empowerment scholarship program.</p>
+        </section>
+        <section class="sign-up">
+            <p class="sign-up-para">Apply for scholorship here!</p>
+            <!-- the form itself -->
+            <form class="sign-up-form">
+              <div class="form-input">
+                <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                <span>!</span>
+                <p class="warning">First name cannot be empty</p>
+              </div>
+      
+              <div class="form-input">
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                <span>!</span>
+                <p class="warning">Last name cannot be empty</p>
+              </div>
+      
+              <div class="form-input">
+                <input type="number" name="Password" id="Password" placeholder="Phone" required>
+                <span>!</span>
+                <p class="warning">Number cannot be empty</p>
+              </div>
+      
+              <div class="form-input">
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <span>!</span>
+                <p class="warning">Looks like this is not an email</p>
+              </div>
+              <input class="submit-btn" button type="button" value="APPLY" onclick="showPopup()" id="sbt_btn">
+            </button>
+              <p class="form-term">
+              </p>
+            </form>
+          </section>
+      </main>
+    </body>
+  </html>
+  {% endblock %}

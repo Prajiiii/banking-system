@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% block head %}
+    {{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+{% endblock %}
+
+{% block content %}
+  <body>
+    <header>
+
+      <h1>Financial Education for Farmers</h1>
+    </header>
+    <main>
+        <h2>Overview</h2>
+        <section>
+          <p>Now more than ever financial education is essential for all types of farmers to make sure they are mmanaging their money as efficently as possible. 
+            At Tribal Banking we would like you to make informed decision with your finances and have provided you with the following information to help you do that:</p>
+            <h3>Managing cash flow</h3>
+            <p>Given the seasonal nature of farming in Ireland it is essential to manage your cashflow in a way that ensures the stability of your farm and other aspects of your life.
+                Projecting income and expenses monthly is a good way to do this. Contact your local branch of click here to find out more information....
+            </p>
+          <h3>Borrowing</h3>
+          <p>Borrowing is an essential part of farmers lifes whether you are a new or an experienced farmer. Ensuring you borrow in a way that allows you to develop as a farmer and ensure the longetivity of your farm.
+            Contact your local branch of click here to find out more information....
+          </p>
+          <h3>Investing</h3>
+          <p>If you understand investment options you can increase your wealth over time. There are many attractive investment options for farmers, ensuring you pick the right one is vital. 
+            Contact your local branch of click here to find out more information....
+          </p>
+          <h3>Tax</h3>
+          <p>Planning your tax year can help you save money and avoid penalties. Let tax not be the reason you are held back as a farmer. 
+            Contact your local branch of click here to find out more information....
+          </p>
+        </section>
+      </main>
+  </html>
+  {% endblock %}
